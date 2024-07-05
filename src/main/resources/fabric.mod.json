@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "squaremap-area",
+  "version": "${version}",
+  "name": "Squaremap Area",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://faewulf.xyz",
+    "sources": "https://github.com/FaeWulf/squaremap-area"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/squaremap-area/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xyz.faewulf.squaremap_area.SquaremapArea"
+    ],
+    "client": [
+      "xyz.faewulf.squaremap_area.SquaremapAreaClient"
+    ]
+  },
+  "mixins": [
+    "squaremap-area.mixins.json",
+    {
+      "config": "squaremap-area.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*",
+    "squaremap": "1.2.5"
+  }
+}
